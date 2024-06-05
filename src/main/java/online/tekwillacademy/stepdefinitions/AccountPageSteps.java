@@ -5,7 +5,7 @@ import online.tekwillacademy.managers.DriverManager;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 
-public class AccountPage {
+public class AccountPageSteps {
     WebDriver driver = DriverManager.getInstance().getDriver();
 
     @Then("the page url contains the {string} keyword")

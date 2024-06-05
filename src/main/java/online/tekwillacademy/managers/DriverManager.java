@@ -1,7 +1,9 @@
 package online.tekwillacademy.managers;
 
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -11,10 +13,12 @@ public class DriverManager {
     private static DriverManager instance;
     private WebDriver driver;
 
-    private DriverManager(){
-        switch (webDriverType.toUpperCase()){
+    private DriverManager() {
+        switch (webDriverType.toUpperCase()) {
             case "CHROME":
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--incognito");
+                driver = new ChromeDriver(options);
                 System.out.println("The Chrome Driver was initiated!");
                 break;
             case "FIREFOX":
@@ -35,21 +39,21 @@ public class DriverManager {
         driver.manage().window().maximize();
     }
 
-    public static DriverManager getInstance(){
-        if (instance == null){
+    public static DriverManager getInstance() {
+        if (instance == null) {
             instance = new DriverManager();
         }
         return instance;
     }
 
-    public WebDriver getDriver(){
-        if (driver == null){
+    public WebDriver getDriver() {
+        if (driver == null) {
             getInstance();
         }
         return driver;
     }
 
-    public void quiteTheDriver(){
+    public void quiteTheDriver() {
         driver.quit();
         driver = null;
         instance = null;

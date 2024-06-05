@@ -6,9 +6,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/main/java/online/tekwillacademy/features",
+        features = "src/main/java/online/tekwillacademy/features",
         glue = "online.tekwillacademy.stepdefinitions",
-        tags = "@run1",
+        tags = "",
         plugin = {"pretty", "html:target/cucumber-reports"}
 )
 

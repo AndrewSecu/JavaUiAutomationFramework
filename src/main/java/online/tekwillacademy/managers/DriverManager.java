@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class DriverManager {
-    private static String webDriverType = "Chrome";
+    private static String webDriverType = ConfigReaderManager.getProperty("browser");
     private static DriverManager instance;
     private WebDriver driver;
 

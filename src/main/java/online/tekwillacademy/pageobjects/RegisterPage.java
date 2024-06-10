@@ -37,16 +37,4 @@ public class RegisterPage extends Page {
         passwordInput.sendKeys(password);
         System.out.println("The form was populated for user " + email + " with password " + password);
     }
-
-    public void enablePrivacyToggle(){
-        ScrollManager.scrollToElement(privacyToggleBar);
-        privacyToggleBar.click();
-        System.out.println("The Privacy Rules are accepted");
-    }
-
-    public void clickOnContinueButton(){
-        ScrollManager.scrollToElement(continueButton);
-        continueButton.click();
-        System.out.println("The continue button is clicked");
-    }
 }

@@ -1,7 +1,7 @@
 package online.tekwillacademy.stepdefinitions;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.When;
+import online.tekwillacademy.managers.ConfigReaderManager;
 import online.tekwillacademy.managers.DataGeneratorManager;
 import online.tekwillacademy.managers.DriverManager;
 import online.tekwillacademy.pageobjects.RegisterPage;
@@ -24,16 +24,6 @@ public class RegisterPageSteps {
         registerPage.completeTheRegisterForm(firstName, lastName, email, password);
     }
 
-    @And("Privacy Toggle is enabled")
-    public void privacyToggleIsEnabled() {
-        registerPage.enablePrivacyToggle();
-    }
-
-    @When("the Continue Button is clicked")
-    public void theContinueButtonIsClicked() {
-        registerPage.clickOnContinueButton();
-    }
-
     @And("the register form is populated with the following data:")
     public void theRegisterFormIsPopulatedWithTheFollowingData(Map<String, String> userDetailsMap) {
         String firstNameValue = userDetailsMap.get("firstName");
@@ -53,7 +43,8 @@ public class RegisterPageSteps {
 
         String passwordValue = userDetailsMap.get("password");
         if (passwordValue != null && passwordValue.toUpperCase().equals("RANDOM")) {
-            passwordValue = DataGeneratorManager.getRandomPassword(10, 20);
+            passwordValue = DataGeneratorManager.getRandomPassword(Integer.parseInt(ConfigReaderManager.getProperty("passwordMin")),
+                    Integer.parseInt(ConfigReaderManager.getProperty("passwordMax")));
         }
 
         registerPage.completeTheRegisterForm(firstNameValue, lastNameValue, emailValue, passwordValue);

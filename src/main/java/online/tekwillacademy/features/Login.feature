@@ -6,7 +6,7 @@ Feature: Login Flow Tests
     And the following set of credentials is entered into the login form:
       | <email>    |
       | <password> |
-    When the login button is clicked
+    When the "loginButton" from "LoginPage" is clicked
     Then the following error messages are displayed:
       | Warning: No match for E-Mail Address and/or Password. |
     Examples:

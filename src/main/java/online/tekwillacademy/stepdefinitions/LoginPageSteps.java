@@ -19,10 +19,4 @@ public class LoginPageSteps {
         String password = collectedList.get(1);
         loginPage.completeTheLoginForm(email, password);
     }
-
-    @When("the login button is clicked")
-    public void theLoginButtonIsClicked() {
-        loginPage.clickOnContinueButton();
-        System.out.println("The login button was clicked");
-    }
 }

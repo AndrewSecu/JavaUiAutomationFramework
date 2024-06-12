@@ -1,0 +1,30 @@
+2024-06-12 20:12:15,004 INFO o.t.s.Hooks [main] The test engine started - this method is executed once
+2024-06-12 20:12:37,516 DEBUG o.t.s.Hooks [main] The test execution is finished!
+2024-06-12 20:14:05,237 INFO o.t.s.Hooks [main] The test engine started - this method is executed once
+2024-06-12 20:14:07,921 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:14:28,943 INFO o.t.s.GenericSteps [main] The link https://tekwillacademy-opencart.online/index.php?route=account/login&language=en-gb is opened
+2024-06-12 20:14:31,451 INFO o.t.s.Hooks [main] After each Scenario!
+2024-06-12 20:14:33,226 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:14:54,226 INFO o.t.s.GenericSteps [main] The link https://tekwillacademy-opencart.online/index.php?route=account/login&language=en-gb is opened
+2024-06-12 20:14:56,354 INFO o.t.s.Hooks [main] After each Scenario!
+2024-06-12 20:14:57,945 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:17:43,628 INFO o.t.s.Hooks [main] The test engine started - this method is executed once
+2024-06-12 20:17:46,225 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:18:07,278 INFO o.t.s.GenericSteps [main] The link https://tekwillacademy-opencart.online/index.php?route=account/login&language=en-gb is opened
+2024-06-12 20:18:09,778 INFO o.t.s.Hooks [main] After each Scenario!
+2024-06-12 20:18:11,394 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:18:32,393 INFO o.t.s.GenericSteps [main] The link https://tekwillacademy-opencart.online/index.php?route=account/login&language=en-gb is opened
+2024-06-12 20:18:34,683 INFO o.t.s.Hooks [main] After each Scenario!
+2024-06-12 20:18:36,391 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:18:57,346 INFO o.t.s.GenericSteps [main] The link https://tekwillacademy-opencart.online/index.php?route=account/login&language=en-gb is opened
+2024-06-12 20:18:59,526 INFO o.t.s.Hooks [main] After each Scenario!
+2024-06-12 20:19:00,967 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:19:25,987 INFO o.t.s.Hooks [main] After each Scenario!
+2024-06-12 20:19:26,892 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:19:50,773 INFO o.t.s.Hooks [main] After each Scenario!
+2024-06-12 20:19:51,708 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:20:16,515 INFO o.t.s.Hooks [main] After each Scenario!
+2024-06-12 20:20:17,469 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:20:40,935 INFO o.t.s.Hooks [main] After each Scenario!
+2024-06-12 20:20:41,835 INFO o.t.s.Hooks [main] A test has been started
+2024-06-12 20:21:06,123 INFO o.t.s.Hooks [main] After each Scenario!

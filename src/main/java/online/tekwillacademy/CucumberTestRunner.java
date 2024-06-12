@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
         features = "src/main/java/online/tekwillacademy/features",
         glue = "online.tekwillacademy.stepdefinitions",
         tags = "",
-        plugin = {"pretty", "html:target/cucumber-reports"}
+        plugin = {"pretty", "json:target/cucumber-reports/cucumber.json", "html:target/cucumber-reports/cucumber.html"}
 )
 
 public class CucumberTestRunner {

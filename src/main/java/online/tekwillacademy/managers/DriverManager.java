@@ -8,6 +8,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.time.Duration;
+
 public class DriverManager {
     private static String webDriverType = ConfigReaderManager.getProperty("browser");
     private static DriverManager instance;
@@ -37,6 +39,13 @@ public class DriverManager {
                 System.out.println("The webDriverType " + webDriverType + " is not defined!");
         }
         driver.manage().window().maximize();
+
+        int implicitWaitValue = Integer.parseInt(ConfigReaderManager.getProperty("implicitWait"));
+        int pageLoadWaitValue = Integer.parseInt(ConfigReaderManager.getProperty("pageLoadWaitValue"));
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWaitValue));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageLoadWaitValue));
+
     }
 
     public static DriverManager getInstance() {

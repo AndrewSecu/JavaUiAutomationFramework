@@ -4,7 +4,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import online.tekwillacademy.managers.DriverManager;
+import online.tekwillacademy.managers.ExplicitWaitManager;
 import online.tekwillacademy.managers.ScrollManager;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,12 +19,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 public class GenericSteps {
+    private static final Logger logger = LogManager.getLogger(GenericSteps.class);
     WebDriver driver = DriverManager.getInstance().getDriver();
 
     @Given("The {string} link is accessed")
     public void theLinkIsAccessed(String collectedLink) {
         driver.get(collectedLink);
-        System.out.println("The link " + collectedLink + " is opened");
+        logger.log(Level.INFO, "The link " + collectedLink + " is opened");
     }
 
     @Then("the following error messages are displayed:")
@@ -38,6 +43,7 @@ public class GenericSteps {
         Field webClickableElementField = classInstance.getDeclaredField(clickableElement);
         webClickableElementField.setAccessible(true);
         WebElement webClickableElement = (WebElement) webClickableElementField.get(classInstance.getConstructor(WebDriver.class).newInstance(driver));
+        ExplicitWaitManager.waitTillElementIsClickable(webClickableElement);
         ScrollManager.scrollToElement(webClickableElement);
         webClickableElement.click();
     }
